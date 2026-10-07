@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="A visual exploration of television energy use and Australian electricity spot prices.">
+	<title>Energy in View | Data Visualisation</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://d3js.org/d3.v7.min.js" defer></script>
+	<script src="charts/scatter.js" defer></script>
+	<script src="charts/donut.js" defer></script>
+	<script src="charts/bar.js" defer></script>
+	<script src="charts/line.js" defer></script>
+</head>
+<body>
+	<header class="page-header">
+		<div class="header-content">
+			<p class="eyebrow">T05 · Data visualisation</p>
+			<h1>D3 Charts <span>Dashboard</span></h1>
+			<p class="introduction">Explore how television energy consumption varies with star rating, screen technology and screen size, alongside changes in Australian electricity spot prices.</p>
+		</div>
+		<p class="header-aside">Four charts<br>One energy story</p>
+	</header>
+
+	<main class="main-content">
+		<div class="section-heading">
+			<p class="section-label">Explore the data</p>
+			<p class="section-introduction">Each view highlights a different relationship. Together, they offer a snapshot of appliance efficiency and the electricity market.</p>
+		</div>
+
+		<div class="chart-grid">
+			<section class="chart-section" aria-labelledby="scatter-title">
+				<div class="chart-heading">
+					<p class="chart-number">01</p>
+					<div>
+						<h2 id="scatter-title">Energy use and star rating</h2>
+						<p>This scatter plot shows the relationship between TV star rating and annual energy consumption. Each point represents a television in the dataset.</p>
+					</div>
+				</div>
+				<div id="scatter-chart" class="chart-placeholder" aria-label="Scatter plot of television energy consumption versus star rating">
+					<p>Scatter plot will appear here</p>
+				</div>
+			</section>
+
+			<section class="chart-section" aria-labelledby="donut-title">
+				<div class="chart-heading">
+					<p class="chart-number">02</p>
+					<div>
+						<h2 id="donut-title">Energy consumption for different screen technologies across all TVs combined</h2>
+						<p>This donut chart compares the average energy consumption of LCD, LED and OLED televisions across all TV sizes.</p>
+					</div>
+				</div>
+				<div id="donut-chart" class="chart-placeholder" aria-label="Donut chart of energy consumption by screen technology across all televisions">
+					<p>Donut chart will appear here</p>
+				</div>
+			</section>
+
+			<section class="chart-section" aria-labelledby="bar-title">
+				<div class="chart-heading">
+					<p class="chart-number">03</p>
+					<div>
+						<h2 id="bar-title">Energy consumption for different screen technologies for 55-inch TVs only</h2>
+						<p>This bar chart compares the average energy consumption of LCD, LED and OLED 55-inch televisions.</p>
+					</div>
+				</div>
+				<div id="bar-chart" class="chart-placeholder" aria-label="Bar chart of energy consumption by screen technology for 55-inch televisions">
+					<p>Bar chart will appear here</p>
+				</div>
+			</section>
+
+			<section class="chart-section" aria-labelledby="line-title">
+				<div class="chart-heading">
+					<p class="chart-number">04</p>
+					<div>
+						<h2 id="line-title">Spot power prices from 1998-2024</h2>
+						<p>This line chart shows the average electricity spot price from 1998 to 2024.</p>
+					</div>
+				</div>
+				<div id="line-chart" class="chart-placeholder" aria-label="Line chart of Australian electricity spot prices from 1998 to 2024">
+					<p>Line chart will appear here</p>
+				</div>
+			</section>
+		</div>
+	</main>
+
+	<footer class="page-footer">
+		<span>T05 · DATA VISUALISATION</span>
+		<span>Television energy use and Australian spot prices</span>
+	</footer>
+</body>
+</html>

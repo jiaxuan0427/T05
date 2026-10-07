@@ -1,0 +1,267 @@
+:root {
+	color-scheme: light;
+	--ink: #203d36;
+	--muted: #5e7169;
+	--paper: #f4f6f1;
+	--panel: #fff;
+	--line: #dce4dc;
+	--green: #2b6d5b;
+	--coral: #d9684c;
+	--soft-green: #e4ede5;
+	font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	color: var(--ink);
+	background: var(--paper);
+}
+
+.page-header {
+	position: relative;
+	display: flex;
+	min-height: 330px;
+	align-items: center;
+	justify-content: space-between;
+	gap: 32px;
+	overflow: hidden;
+	padding: 48px max(7vw, 24px);
+	background-color: #e5eee7;
+	background-image: radial-gradient(ellipse at 78% 110%, transparent 0 22%, rgba(43, 109, 91, .08) 22.2% 22.5%, transparent 22.7% 30%, rgba(43, 109, 91, .07) 30.2% 30.5%, transparent 30.7% 38%, rgba(43, 109, 91, .06) 38.2% 38.5%, transparent 38.7%);
+	border-bottom: 1px solid #d3dfd5;
+}
+
+.header-content {
+	position: relative;
+	z-index: 1;
+	max-width: 680px;
+}
+
+.eyebrow,
+.section-label,
+.chart-number,
+.page-footer,
+.header-aside {
+	font-size: 11px;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+}
+
+.eyebrow {
+	margin: 0 0 22px;
+	color: var(--green);
+	font-weight: 700;
+}
+
+h1 {
+	margin: 0 0 18px;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 76px;
+	font-weight: 400;
+	line-height: .95;
+}
+
+h1 span {
+	color: var(--green);
+	font-style: italic;
+}
+
+.introduction {
+	max-width: 570px;
+	margin: 0;
+	color: #425d53;
+	font-size: 16px;
+	line-height: 1.65;
+}
+
+.header-aside {
+	flex: 0 0 auto;
+	margin: 92px 5vw 0 0;
+	color: var(--green);
+	font-weight: 700;
+	line-height: 1.8;
+}
+
+.main-content {
+	width: min(1180px, calc(100% - 48px));
+	margin: 0 auto;
+	padding: 54px 0 68px;
+}
+
+.section-heading {
+	display: grid;
+	grid-template-columns: 180px minmax(0, 1fr);
+	gap: 24px;
+	align-items: start;
+	margin-bottom: 25px;
+}
+
+.section-label {
+	margin: 4px 0 0;
+	color: var(--coral);
+	font-weight: 700;
+}
+
+.section-introduction {
+	max-width: 650px;
+	margin: 0;
+	color: var(--muted);
+	font-size: 14px;
+	line-height: 1.65;
+}
+
+.chart-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 18px;
+}
+
+.chart-section {
+	min-width: 0;
+	padding: 22px;
+	background: var(--panel);
+	border: 1px solid var(--line);
+	border-radius: 5px;
+	box-shadow: 0 5px 18px rgba(32, 61, 54, .035);
+}
+
+.chart-heading {
+	display: grid;
+	grid-template-columns: 30px minmax(0, 1fr);
+	gap: 12px;
+	min-height: 108px;
+}
+
+.chart-number {
+	margin: 4px 0 0;
+	color: var(--coral);
+	font-weight: 700;
+}
+
+.chart-heading h2 {
+	margin: 0 0 8px;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 1.2;
+}
+
+.chart-heading p:last-child {
+	margin: 0;
+	color: var(--muted);
+	font-size: 13px;
+	line-height: 1.55;
+}
+
+.chart-placeholder {
+	display: grid;
+	width: 100%;
+	min-height: 250px;
+	aspect-ratio: 1.55 / 1;
+	place-items: center;
+	overflow: hidden;
+	background-color: #fbfcfa;
+	background-image: linear-gradient(to right, rgba(43, 109, 91, .045) 1px, transparent 1px), linear-gradient(to bottom, rgba(43, 109, 91, .045) 1px, transparent 1px);
+	background-size: 28px 28px;
+	border: 1px dashed #cad8cd;
+	border-radius: 3px;
+}
+
+.chart-placeholder p {
+	margin: 0;
+	padding: 10px 14px;
+	color: #71847b;
+	background: rgba(251, 252, 250, .9);
+	font-size: 12px;
+}
+
+.page-footer {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+	padding: 20px max(7vw, 24px);
+	color: #688077;
+	border-top: 1px solid var(--line);
+	font-size: 10px;
+}
+
+@media (max-width: 700px) {
+	.page-header {
+		min-height: 310px;
+		padding: 42px 24px 52px;
+	}
+
+	h1 {
+		font-size: 62px;
+	}
+
+	.header-aside {
+		display: none;
+	}
+
+	.main-content {
+		width: min(100% - 32px, 540px);
+		padding: 38px 0 48px;
+	}
+
+	.section-heading {
+		grid-template-columns: 1fr;
+		gap: 8px;
+	}
+
+	.chart-grid {
+		grid-template-columns: 1fr;
+		gap: 14px;
+	}
+
+	.chart-section {
+		padding: 18px;
+	}
+
+	.chart-heading {
+		min-height: 0;
+		padding-bottom: 18px;
+	}
+
+	.chart-placeholder {
+		min-height: 230px;
+		aspect-ratio: 1.35 / 1;
+	}
+}
+
+@media (max-width: 420px) {
+	.page-header {
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+
+	h1 {
+		font-size: 54px;
+	}
+
+	.introduction {
+		font-size: 15px;
+	}
+
+	.chart-section {
+		padding: 15px;
+	}
+
+	.chart-heading h2 {
+		font-size: 20px;
+	}
+
+	.chart-placeholder {
+		min-height: 210px;
+	}
+
+	.page-footer {
+		flex-direction: column;
+		gap: 7px;
+		padding: 18px 16px;
+	}
+}

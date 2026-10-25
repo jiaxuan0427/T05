@@ -49,8 +49,7 @@ d3.csv("data/Ex5_TV_energy.csv", (row) => ({
 		if (plotWidth <= 0 || plotHeight <= 0) return;
 
 		const x = d3.scaleLinear()
-			.domain(d3.extent(plotData, (row) => row.star2))
-			.nice()
+			.domain([0, 8])
 			.range([0, plotWidth]);
 
 		const y = d3.scaleLinear()
@@ -70,7 +69,11 @@ d3.csv("data/Ex5_TV_energy.csv", (row) => ({
 
 		plot.append("g")
 			.attr("transform", `translate(0,${plotHeight})`)
-			.call(d3.axisBottom(x).ticks(Math.max(2, Math.floor(plotWidth / 65))))
+			.call(
+				d3.axisBottom(x)
+					.tickValues(d3.range(0, 9, 1))
+					.tickFormat(d3.format("d"))
+			)
 			.call(styleAxis);
 
 		plot.append("g")
